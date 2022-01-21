@@ -1,0 +1,76 @@
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="home.css">
+  <title>Portraits Through Time</title>
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js" type="text/javascript"></script>
+
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+  </style>
+
+<body>
+  <div id="main">
+  <p  id="name" style="color: #fafafa;">A Portrait Through Time</p>
+  <div id="button"> <span>start</span></div>
+  </div>
+  <div id="canvasContainer" style="display: none;">
+    <div id="button">
+      <p id="timer"> 
+
+      </p>
+    </div>
+    <div class="pres" id="p0" style="visibility: hidden;" ></div>
+    <div class="pres" id="p1"></div>
+    <div class="pres" id="p2"></div>
+    <div class="pres" id="p3"></div>
+    <div class="pres" id="p4"></div>
+    <div class="fut" id="f0" style="visibility: hidden;"></div>
+     <div class="fut" id="f1"></div>
+     <div class="fut" id="f2"></div>
+     <div class="fut" id="f3"></div>
+     <div class="fut" id="f4"></div>
+    <div class="past" id="pt0"  style="visibility: hidden;" ></div>
+    <div class="past" id="pt1"></div>
+    <div class="past" id="pt2"></div>
+    <div class="past" id="pt3"></div>
+    <div class="past" id="pt4"></div>
+    <img id="style-img" src="" style="visibility: hidden;" alt="Girl">
+  </div>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+<script>
+  function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  }
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") {
+        toggleFullScreen();
+        console.log("Fullscreen")
+      }
+    }, false);
+
+</script>
+<script src="dist/bundle.js"></script>
+</body>
+</html>
