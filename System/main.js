@@ -26,7 +26,7 @@ const height = 300;*/
 const width = 1280;
 const height = 720;
 
-//ID's Cameras
+//ID's Cameras //EDIT HERE YOUR DEVICES IDS
 let id_right_cam = "f67e2a358a2f688c432e374f4df67c669fc1a7013d418b0417e6359b8c29909a";
 let id_front_cam = "c901ec76ec5aa2bb3f9f41001a9d8ce8be44fe968a8973ca8caf16bb098b57fd";
 let id_left_cam = "1b91c1d42ab40e89da4f66bff844f7309cc286594e6db87adf37328e0b7df1ee";
@@ -151,9 +151,6 @@ class Main {
 
   
   initializeStyleTransfer(index) {
-    //const divframe = document.getElementById('style-img');
-    //this.contentImg = document.getElementById('c');
-
       this.contentImg = canvas_fut[0][index];
       
 
@@ -179,14 +176,14 @@ class Main {
   async startStyling() {
       await tf.nextFrame();
       console.log('Starting styling...');
-      //console.log('Getting Style Image');
+
       await tf.nextFrame();
       let bottleneck = await tf.tidy(() => {
         return this.styleNet.predict(tf.browser.fromPixels(this.styleImg).toFloat().div(tf.scalar(255)).expandDims());
       })
       if (this.styleRatio !== 1.0) {
         console.log('One more thing...');
-        //console.log('Getting Content Image');
+
         await tf.nextFrame();
         const identityBottleneck = await tf.tidy(() => {
           return this.styleNet.predict(tf.browser.fromPixels(this.contentImg).toFloat().div(tf.scalar(255)).expandDims());
@@ -439,13 +436,9 @@ function gotResults2(err, result) {
   // Clear part of the canvas
   //Draws video on first canvas created located on div id=p0
   ctx[0].fillStyle = "#000000";
-  ctx[0].fillRect(0, 0, canvas_w, canvas_h); //---------NOTE 
-  //----- IDeA fazer returno do valor da width 
-  //da track e associar isso ao tamanho da canvas
+  ctx[0].fillRect(0, 0, canvas_w, canvas_h); 
 
   ctx[0].drawImage(vid_left, 0, 0, width, height);
-  //drawImageProp(ctx[0], vid_front,0,0,canvas_w,canvas_h);
-
 
   if (detections && stop==false) {
     if (detections.length > 0) {
@@ -499,8 +492,6 @@ function drawLandmarks(detections, ctx, canvas) {
     //----NOSE
     var nose_x = nose[4]._x;
     var nose_y = nose[0]._y - 10;
-   /* var nose_w = 40;
-    var nose_h = 50;*/
     var nose_w = 140;
     var nose_h = 150;
 
@@ -590,10 +581,8 @@ async function getVideo(cam, div) {
   // Create a webcam capture
   const capture = await navigator.mediaDevices.getUserMedia(constrains);
   videoElement.srcObject = capture;
-  // console.log(capture.getVideoTracks()[0].getSettings().width);
-  //console.log(capture.getVideoTracks()[0].getSettings().height);
-  // Create a webcam capture
 
+  // Create a webcam capture
   videoElement.play();
   if (div[0].className === 'fut') {
     const track = capture.getVideoTracks()[0];
