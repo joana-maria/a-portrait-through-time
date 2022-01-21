@@ -3,7 +3,7 @@
 ## Context ##
 
 *A Portrait Through Time* was developed in the context of the Computational Design Laboratory course of the [master’s degree in Design and Multimedia](https://dm.dei.uc.pt/en/) of the Faculty of Sciences and Technology of the [University of Coimbra](https://www.uc.pt/en). We were challenged to explore new ways of developing design artifacts while using computational methods. We had a variety of themes to chose from, and I decided to explore the notion of *Future*.
-This project was supervised by Tiago Martins, João M. Cunha, Pedro Silva, and Sérgio M. Rebelo.
+This project was supervised by Tiago Martins, João M. Cunha, Pedro Silva, and Sérgio M. Rebelo. ;)
 
 ## Concept ##
 
