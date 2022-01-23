@@ -1,5 +1,7 @@
 # A Portrait Through Time 
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/83835690/150690921-1432149c-55e2-40f3-9566-8fc703da0560.gif)
+
 ## Context ##
 
 *A Portrait Through Time* was developed in the context of the Computational Design Laboratory course of the [master’s degree in Design and Multimedia](https://dm.dei.uc.pt/en/) of the Faculty of Sciences and Technology of the [University of Coimbra](https://www.uc.pt/en). We were challenged to explore new ways of developing design artifacts while using computational methods. We had a variety of themes to chose from, and I decided to explore the notion of *Future*.
