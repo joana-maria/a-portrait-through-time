@@ -346,7 +346,7 @@ function getRandomInt(min, max) {
 
 async function make(cam) {
  //Choses a random source image for the Style Image
- //rand = getRandomInt(0, 7);
+ rand = getRandomInt(0, 7);
  style_img = document.getElementById('style-img');
 
  style_img.src = '/images/' + style_images[1];
