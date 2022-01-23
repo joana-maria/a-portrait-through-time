@@ -55,7 +55,7 @@ a{
   color: #fafafa;
 }
 
-#text{
+.text{
   font-family: 'Roboto Slab', serif;
   color: #fafafa;
   font-size: 17;
@@ -263,7 +263,8 @@ to   { opacity: 1; }
 
 #timer{
   color: #fafafa;
-  font-family: Inter;
+  font-family: 'IM Fell English SC', serif;
+  font-size: 16;
 }
 
 canvas{

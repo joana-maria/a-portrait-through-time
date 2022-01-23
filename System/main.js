@@ -349,7 +349,7 @@ async function make(cam) {
  //rand = getRandomInt(0, 7);
  style_img = document.getElementById('style-img');
 
- style_img.src = '/images/' + style_images[5];
+ style_img.src = '/images/' + style_images[1];
 
  console.log(rand);
   
