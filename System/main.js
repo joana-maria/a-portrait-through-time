@@ -21,15 +21,13 @@ let faceapi, faceapi2,faceapi3;
 let detections;
 
 let vid_front, vid_left, vid_right;
-/*const width = 397;
-const height = 300;*/
 const width = 1280;
 const height = 720;
 
 //ID's Cameras //EDIT HERE YOUR DEVICES IDS
-let id_right_cam = "f67e2a358a2f688c432e374f4df67c669fc1a7013d418b0417e6359b8c29909a";
+let id_right_cam = "500507536bbb1fa5a2273d3dc1a6f0225db7f4ebce979406fef3f1b5f31d3c91";
 let id_front_cam = "c901ec76ec5aa2bb3f9f41001a9d8ce8be44fe968a8973ca8caf16bb098b57fd";
-let id_left_cam = "1b91c1d42ab40e89da4f66bff844f7309cc286594e6db87adf37328e0b7df1ee";
+let id_left_cam = "8b7ec796395ff4039919b25bd4788d12028d473b8f9f4b1e12756d1b82492bfb";
 
 let canvas, ctx;
 let canvas_pres, ctx_pres;
@@ -65,7 +63,7 @@ const detectionOptions = {
 };
 
 
-document.getElementById('main').addEventListener('click', function (event) {
+document.getElementById('button1').addEventListener('click', function (event) {
   document.getElementById('main').style.display = 'none';
   document.getElementById('canvasContainer').style.display = 'grid';
   // do something
@@ -301,10 +299,13 @@ document.addEventListener("keydown", function(e) {
       engine4 = null;
       blur = true;
       stop = false;
-      rand = Math.round(Math.random(0,6));
- style_img = document.getElementById('style-img');
 
- style_img.src = '/images/' + style_images[rand];
+      rand = Math.round(Math.random(0,6));
+      style_img = document.getElementById('style-img');
+
+      style_img.src = '/images/' + style_images[rand];
+
+      console.log(rand);
     } 
   }
 }, false);
@@ -337,14 +338,21 @@ function runStyleTransfer(){
   }
 }
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 async function make(cam) {
  //Choses a random source image for the Style Image
- rand = Math.round(Math.random(0,6));
+ //rand = getRandomInt(0, 7);
  style_img = document.getElementById('style-img');
 
- style_img.src = '/images/' + style_images[rand];
-  console.log(rand);
-  console.log(style_img.src);
+ style_img.src = '/images/' + style_images[5];
+
+ console.log(rand);
+  
   // get the video
   //Front Camera - Present
   vid_front = await getVideo(cam[0], divs_pres);

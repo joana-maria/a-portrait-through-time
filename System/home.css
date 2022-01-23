@@ -15,26 +15,96 @@ align-items: center;
 flex-direction: column;
 }
 
+#main1{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#main2{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main3{
+  height: 100%;
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+p{
+  padding: 0%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+a{
+  text-decoration: none;
+  color: #fafafa;
+}
+
+#text{
+  font-family: 'Roboto Slab', serif;
+  color: #fafafa;
+  font-size: 17;
+  line-height: 19pt;
+}
+
+.title{
+  font-family: 'IM Fell English SC', serif;
+  font-size: 30;
+  color: #fafafa;
+}
+
 span{
   font-family: 'IM Fell English SC', serif;
   font-size: 20;
   cursor: pointer;
-  color: #707070;
-
-  -webkit-animation: fadein 8s; /* Safari, Chrome and Opera > 12.1 */
-       animation: fadein 8s;
 }
 
-span:hover {
+#note{
+  color: #fafafa;
+  margin-top: auto; 
+  margin-bottom: 80px;
+  
+}
+
+#about{
+  color: #fafafa;
+  margin-left: auto; 
+  margin-right: 40px;
+  margin-top: 40px;
+}
+
+#home{
+  color: #fafafa;
+  margin-left: auto; 
+  margin-right: 40px;
+  margin-top: 40px;
+}
+
+#button1:hover {
   color: #fafafa;
 }
 
-#button{
+#button1{
 width: 100px;
 height: 40px;
-
-
-color: #fafafa;
+color: #707070;
+-webkit-animation: fadein 8s; /* Safari, Chrome and Opera > 12.1 */
+animation: fadein 8s;
 }
 #name{
   color: #fafafa;
@@ -122,7 +192,7 @@ to   { opacity: 1; }
 
 
 #pt3{
-  grid-area: 7/9/span 5/span 4;
+  grid-area: 7/9/span 4/span 4;
   z-index: -1;
 }
 
@@ -155,7 +225,7 @@ to   { opacity: 1; }
 }
 
 #f4{
-  grid-area: 6/18/span 7/span 2;
+  grid-area: 5/18/span 7/span 2;
   z-index: 1;
 }
 
@@ -185,7 +255,7 @@ to   { opacity: 1; }
 }
 
 #button{
-  grid-area: 13/1/span 1/span 22;
+  grid-area: 1/1/span 1/span 22;
   display: flex;
   justify-content: center;
   align-items: center;
